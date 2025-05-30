@@ -1,0 +1,141 @@
+/* Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Google Fonts déjà importé dans le HTML */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #FAFAFA;
+  color: #333;
+  margin: 0;
+  padding: 0 1rem;
+  line-height: 1.6;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-top: 1em;
+}
+
+h1, h2, h3 {
+  color: #000;
+}
+
+h2 {
+  margin-top: 2rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+/* Conteneur menu */
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  padding: 1em 0;
+}
+
+/* Chaque plat */
+.menu-item {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 1em;
+  align-items: flex-start;
+}
+
+/* Image des plats */
+.menu-item img {
+  width: 100%;
+  height: auto;
+  border: 3px solid gray;
+  border-radius: 8px;
+}
+
+/* Texte des plats */
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+  padding: 0.3em 0;
+}
+
+.details h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.details p {
+  font-size: 0.95rem;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Prix */
+.price {
+  float: right;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* Bouton CTA */
+.cta-container {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.cta {
+  border: none;
+  border-radius: 6px;
+  background-color: #1A1A1A;
+  color: white;
+  padding: 1em 2em;
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  transition: 0.2s ease;
+}
+
+.cta:hover {
+  background-color: #1E874B;
+  cursor: pointer;
+  opacity: 0.85;
+}
+
+/* Responsive pour les écrans < 600px */
+@media (max-width: 600px) {
+  .menu-item {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .menu-item img {
+    max-width: 200px;
+    margin: 0 auto;
+  }
+
+  .details {
+    align-items: center;
+  }
+
+  .details h3 {
+    font-size: 1rem;
+  }
+
+  .details p {
+    font-size: 0.9rem;
+  }
+
+  .price {
+    float: none;
+    display: block;
+    margin-top: 0.2em;
+  }
+
+  .cta {
+    width: 100%;
+    font-size: 1.1rem;
+  }
+}
+
